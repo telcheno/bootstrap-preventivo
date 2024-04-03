@@ -7,7 +7,7 @@ const nomeElementForm = document.getElementById("nome")//stringa
 
 const cognomeElementForm = document.getElementById("cognome")
 // const cognome = cognomeElementForm.value;//stringa
-console.dir(cognomeElementForm);
+// console.dir(cognomeElementForm);
 
 
 const emailElementForm = document.getElementById("email")
@@ -35,15 +35,28 @@ const prezzoElementForm = document.getElementById("prezzo")
 const preventivoElementForm = document.getElementById("from-preventivo");
 // console.dir(preventivoElementForm);
 
+//agiungo eveneto "submti" al elemento form
 preventivoElementForm.addEventListener("submit", function(event){
+  //bloco il "event.preventDefault()" del from 
   event.preventDefault();
-  const scelta = prestazioniElementForm.value;
-  const codidePromo = codePromoElementForm.value;
-  const costoOraLavoro = 0 //numbersa
 
+  //recupero i "value" de gli elementi 
+  const scelta = prestazioniElementForm.value;//string
+  const codidePromo = codePromoElementForm.value;//string
+  const costoOraLavoro = 0 //number
+
+  //creo la "function" per dare il prezzo ad ogni "scelta"
+  function prezzoOrario(scelta){
+    //SE "scelta" e === "backend"
+    //--"costoOraLavoro" = 20.50
+    //ALTRIMENTI SE "scelta" === "fronted""
+    //--"costoOraLavoro" = 15.30
+    //ALTRIMENTI
+    //--"costoOraLavoro" = 33.60
+  }
+  
 })
 
-//
 
 
 
