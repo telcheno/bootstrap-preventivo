@@ -18,7 +18,7 @@
             <a class="navbar-brand" href="#">Bool Factory</a>
           </div>
 
-          <div class="col-3">
+          <div class="col-2 ps-2">
             <!-- Button per standere le opzioni in movile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -56,8 +56,9 @@
                 <h2>Richiesta Preventivo</h2>
                 <span class="fw-medium">Compila il form per riciederte in preventivo per i nostri servizio di sviluppo</span>
               </div>
+              
               <!-- form section -->
-              <form>
+              <form id="from-preventivo">
                 <!-- dati personali -->
                 <div class="mb-3">
                   <label for="nome" class="form-label" >Nome</label>
@@ -76,9 +77,9 @@
                   <label for="prestazione" class="form-label">Tipo di lovoro</label>
                   <select class="form-select" id="prestazione" name="prestazione">
                     <option selected value="tipo-prestazione">Seleziona il tipo di lavoro</option>
-                    <option value="backend">Sviluppo Backend</option>
-                    <option value="fronted">Sviluppo Frontend</option>
-                    <option value="analisi">Analisi Progettuale</option>
+                    <option value="backend">Backed Development</option>
+                    <option value="fronted">Frontend Development</option>
+                    <option value="analisi">Project Analysis</option>
                   </select>
                 </div>
                 <div class="mb-3">
@@ -94,24 +95,47 @@
                 </div>
                 <!-- check -->
                 <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                  <label class="form-check-label" for="flexCheckDefault">
+                  <label class="form-check-label" for="privacy">
+                  <input class="form-check-input" type="checkbox" value="" id="privacy" name="privacy" required>
                     Acetto la Privacy Policy
                   </label>
                 </div>
                 <!-- submit preventivo -->
                 <div class="row my-5 text-center justify-content-around">
                   <div class="col-lg-4 col-ms-12">
-                    <button type="submit" id="calcolo" class="btn btn-primary">Calcola Preventivo</button>
+                    <button type="submit" id="submit" name="submit" class="btn btn-primary">Calcola Preventivo</button>
                   </div>
                   <!-- prezzo preventivo -->
                   <div class="col-lg-4 col-ms-12 mt-3" id="prezzo">
+                    <!-- <table class="table fs-7">
+                      <thead>
+                        <tr>
+                          <th scope="col">Descrizione</th>
+                          <th scope="col">Valori</th>
+                          <th scope="col">Totale</th>
+                        </tr>
+                      </thead>
+                      <tbody class="table-group-divider">
+                        <tr>
+                          <td>Backed</td>
+                          <td>20.50 € l'ora</td>
+                          <td>250.00 €</td>
+                        </tr>
+                        <tr>
+                          <td>Sconto</td>
+                          <td>25%</td>
+                          <td>100 €</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table> -->
                     Prezzo Finale
                     <div class=".col">€ 200,00</div>
                   </div>
-
                 </div>
-              </form>
+              </form> 
+              
+              
             </div>
 
             <!-- info contatti -->
@@ -139,7 +163,7 @@
 
     <!-- footer -->
     <footer>
-      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body mt-4" data-bs-theme="dark">
         <div class="col text-center text-light  py-3">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle align-items-center" viewBox="0 0 16 16">
             <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
