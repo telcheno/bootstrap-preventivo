@@ -70,7 +70,7 @@ preventivoElementForm.addEventListener("submit", function(event){
     alert("Per il calcolo del preventivo devi scegliere una opzione di lavoro")
   }
 
-  //controlo del inserimento del codice promozionale
+  //controllo del inserimento del codice promozionale
   //creo un "array" con i codici promo da controlare
   //creo una variabile con  "codice cliente" con il varore "false"  pre controlo iterazione
   //creo variabile "sconto" = 0
