@@ -70,8 +70,18 @@ preventivoElementForm.addEventListener("submit", function(event){
     alert("Per il calcolo del preventivo devi scegliere una opzione di lavoro")
   }
 
-  //creo "function" per il calcolo del prezzo base lavoro
-  
+  //controlo del inserimento del codice promozionale
+  //creo un "array" con i codici promo da controlare
+  //creo una variabile con  "codice cliente" con il varore "false"  pre controlo iterazione
+  //creo variabile "sconto" = 0
+  //facio un ciclo "for" per confrontare il "codice cliente" con il "codigo promo"
+  //"indice corrent" = indice del "array"
+  //--con una condizionale
+  //--SE "codice cliente" === "indice corrente" 
+  //--"codice cliente" = true
+  //--"sconto" = 25%
+  //ALTRIMENTI
+  //--"sconto" = 0
 })
 
 
