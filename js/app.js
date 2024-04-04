@@ -6,15 +6,14 @@ const nomeElementForm = document.getElementById("nome")//stringa
 // console.dir(nomeElementForm);
 
 const cognomeElementForm = document.getElementById("cognome")
-// const cognome = cognomeElementForm.value;//stringa
 // console.dir(cognomeElementForm);
 
 
 const emailElementForm = document.getElementById("email")
 // console.dir(emailElementForm);
-// const email = emailElementForm.value;//stringa
 
 // elementi per il calcolo del preventivo
+
 // tipo di lavoro da clacolare
 const prestazioniElementForm = document.getElementById("prestazione")
 // console.dir(prestazioniElementForm);
@@ -37,23 +36,41 @@ const preventivoElementForm = document.getElementById("from-preventivo");
 
 //agiungo eveneto "submti" al elemento form
 preventivoElementForm.addEventListener("submit", function(event){
+
   //bloco il "event.preventDefault()" del from 
   event.preventDefault();
 
   //recupero i "value" de gli elementi 
   const scelta = prestazioniElementForm.value;//string
   const codidePromo = codePromoElementForm.value;//string
-  const costoOraLavoro = 0 //number
+  let costoOraLavoro = 0 //number
+  let tempoLavoro = 10 //number
+  let prezzoBase = 0 //number
+    
+  //condizionale per il consto per ogni prestazione
 
-  //creo la "function" per dare il prezzo ad ogni "scelta"
-  function prezzoOrario(scelta){
-    //SE "scelta" e === "backend"
-    //--"costoOraLavoro" = 20.50
-    //ALTRIMENTI SE "scelta" === "fronted""
-    //--"costoOraLavoro" = 15.30
-    //ALTRIMENTI
-    //--"costoOraLavoro" = 33.60
+  //SE "scelta" e === "backend"
+  if (scelta === "backend"){
+  //--"costoOraLavoro" = 20.50
+    costoOraLavoro = 20.50
+    console.log(costoOraLavoro);
+  //ALTRIMENTI SE "scelta" === "fronted"" 
+  }else if (scelta === "fronted"){
+      //--"costoOraLavoro" = 15.30
+      costoOraLavoro = 15.30
+      console.log(costoOraLavoro);
+  //ALTRIMENTI SE "scelta" === "analisi"
+  }else if (scelta === "analisi") {
+      //--"costoOraLavoro" = 33.60
+    costoOraLavoro = 33.60
+    console.log(costoOraLavoro);  
+  // ALTRIMENTI
+  }else{
+    //--invio "alert" per informare che si deve scegliere un opzione
+    alert("Per il calcolo del preventivo devi scegliere una opzione di lavoro")
   }
+
+  //creo "function" per il calcolo del prezzo base lavoro
   
 })
 
