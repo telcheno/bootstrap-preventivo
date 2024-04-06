@@ -14,11 +14,11 @@
       <!-- Navbar header -->
       <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
         <div class="container-fluid">
-          <div class="col-3 ms-5">
+          <div class="col-3 ms-3">
             <a class="navbar-brand" href="#">Bool Factory</a>
           </div>
 
-          <div class="col-2 ps-2">
+          <div class="col-2 ms-2">
             <!-- Button per standere le opzioni in movile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -39,7 +39,6 @@
               </ul>
             </div>
           </div>
-        
         </div>
       </nav>
     </header>
@@ -61,21 +60,21 @@
               <form id="from-preventivo">
                 <!-- dati personali -->
                 <div class="mb-3">
-                  <label for="nome" class="form-label" >Nome</label>
-                  <input type="text" class="form-control" id="nome" name="nome" required>
+                  <label for="nome" class="form-label " >Nome</label>
+                  <input type="text" class="form-control border-primary" id="nome" name="nome" required>
                 </div>
                 <div class="mb-3">
                   <label for="cognome" class="form-label">Cognome</label>
-                  <input type="text" class="form-control" id="cognome" name="cognome" required>
+                  <input type="text" class="form-control border-primary" id="cognome" name="cognome" required>
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" required>
+                  <input type="email" class="form-control border-primary" id="email" required>
                 </div>
                 <!-- detagli prestazioni -->
                 <div class="mb-3">
                   <label for="prestazione" class="form-label">Tipo di lovoro</label>
-                  <select class="form-select" id="prestazione" name="prestazione">
+                  <select class="form-select border-primary" id="prestazione" name="prestazione">
                     <option selected value="tipo-prestazione">Seleziona il tipo di lavoro</option>
                     <option value="backend">Backed Development</option>
                     <option value="fronted">Frontend Development</option>
@@ -85,52 +84,39 @@
                 <div class="mb-3">
                   <label for="descrizione" class="form-label">Descrizione del lavoro</label>
                   <div class="form-floating ">
-                    <textarea class="form-control" id="descrizione" style="height: 100px" name="descrizione" required></textarea>
+                    <textarea class="form-control border-primary" id="descrizione" style="height: 100px" name="descrizione" required></textarea>
                   </div>
                 </div>
                 <!-- promo  -->
                 <div class="mb-3">
                   <label for="code-promo" class="form-label">Codice Promozionale (opzionale)</label>
-                  <input type="text" class="form-control" id="code-promo" name="code-promo">
+                  <input type="text" class="form-control border-primary" id="code-promo" name="code-promo">
                 </div>
                 <!-- check -->
                 <div class="form-check">
                   <label class="form-check-label" for="privacy">
-                  <input class="form-check-input" type="checkbox" value="" id="privacy" name="privacy" required>
+                  <input class="form-check-input border-primary" type="checkbox" value="" id="privacy" name="privacy" required>
                     Acetto la Privacy Policy
                   </label>
                 </div>
                 <!-- submit preventivo -->
-                <div class="row my-5 text-center justify-content-around">
-                  <div class="col-lg-4 col-ms-12">
+                <div class="row my-5 text-center align-items-center justify-content-around">
+                  <div class="col-lg-4 col-ms-12 align-items-center">
                     <button type="submit" id="submit" name="submit" class="btn btn-primary">Calcola Preventivo</button>
                   </div>
                   <!-- prezzo preventivo -->
-                  <div class="col-lg-4 col-ms-12 mt-3" id="prezzo">
-                    <!-- <table class="table fs-7">
+                  <div class="col-lg-8 col-ms-12 mt-4 ms-p-5">
+                    <table class="table fs-7">
+                      <!-- talble info preventivo -->
                       <thead>
                         <tr>
                           <th scope="col">Descrizione</th>
                           <th scope="col">Valori</th>
-                          <th scope="col">Totale</th>
                         </tr>
                       </thead>
-                      <tbody class="table-group-divider">
-                        <tr>
-                          <td>Backed</td>
-                          <td>20.50 € l'ora</td>
-                          <td>250.00 €</td>
-                        </tr>
-                        <tr>
-                          <td>Sconto</td>
-                          <td>25%</td>
-                          <td>100 €</td>
-                        </tr>
-                        
+                      <tbody class="table-group-divider" id="prezzo-tbody">
                       </tbody>
-                    </table> -->
-                    Prezzo Finale
-                    <div class=".col">€ 200,00</div>
+                    </table>
                   </div>
                 </div>
               </form> 
