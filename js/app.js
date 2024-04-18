@@ -74,24 +74,40 @@ const codSconto = codePromoElementForm.value;
 
 //creo variabile "sconto" = 0
 let percentualeSconto = 0;//number
-const codiceValido = false;//booleano
+let codiceValido = false;//booleano
 
 //facio un ciclo "for" per confrontare il "codice cliente" con il "codigo promo"
 for(let i = 0; i < codiciPromo.length; i++){
 
-                                  //USO UNA CONDIZIONALE
-//--SE "codice cliente" === "indice promo" 
-  if (codSconto === codiciPromo[i]){
-    //--"sconto" = 25%
-    percentualeSconto = 25;
-    break;
-  }if(codSconto !== codSconto[i]){
-    alert("Codice sconto non valido, verra calcolato il preventivo senza sconto");
-    break;
-  }else{
-    percentualeSconto = 0;
-  }
+    //USO UNA CONDIZIONALE DEFINIRE SE IL CODICE INSERITO E VALIDO 
+    const codiceCorrente = codiciPromo[i];// stringa
+    //SE "codice corrente" è === "codice soconto"
+    if(codiceCorrente === codSconto){
+
+      //"codice valido" diventa ture
+      codiceValido = true;
+    }
 }
+
+    //CREO UNA CONDIZIONALE PER  APLICARE LO SOCONTO
+    //SE "cidice valido" è == ture
+    if(codiceValido === true){
+      //aplico "percentuale  di sconto" = 25
+      percentualeSconto = 25;
+      
+      //ALRTIMENTI SE aviso che il "codice valido " !== true 
+    }else if(codiceValido !== true){
+      //aviso che il codice non è valido e que non si aplica lo sconto
+      alert("Codice non valido, verra calcolato il preventivo senza sconto");
+
+      //ALTRIMENTI
+    }else{
+      //"percentuale  di sconto" = 0
+      percentualeSconto = 0;
+
+    }
+
+
 
                                 //CALCOLO DEL PERVENTIVO
 //"prezzo base" = "costoOraLavoro" * "tempoLavoro"
@@ -110,15 +126,15 @@ console.log(prezzoScontato);
 prezzoElementForm.innerHTML = `
 <tr>
 <td>Pezzo Base</td>
-<td>€ ${prezzoBase}</td>
+<td>€ ${prezzoBase.split(".")[0]}.<spam class="decimali">${prezzoBase.split(".")[1]}</td>
 </tr>
 <tr>
 <td>Sconto</td>
-<td>€ ${valoreSconto}</td>
+<td>€ ${valoreSconto.split(".")[0]}.<spam class="decimali">${valoreSconto.split(".")[1]}</td>
 </tr>
 <tr>
 <td>Totale Preventivo</td>
-<td>€ ${prezzoScontato}</td>
+<td>€ ${prezzoScontato.split(".")[0]}.<spam class="decimali">${prezzoScontato.split(".")[1]}</spam></td>
 </tr>
 `;
 })
