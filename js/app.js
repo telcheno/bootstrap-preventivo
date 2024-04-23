@@ -98,7 +98,7 @@ for(let i = 0; i < codiciPromo.length; i++){
       //ALRTIMENTI SE aviso che il "codice valido " !== true 
     }else if(codiceValido !== true){
       //aviso che il codice non è valido e que non si aplica lo sconto
-      alert("Codice non valido, verra calcolato il preventivo senza sconto");
+      alert("Codice promozionale non valido, verra calcolato il preventivo senza sconto");
 
       //ALTRIMENTI
     }else{
