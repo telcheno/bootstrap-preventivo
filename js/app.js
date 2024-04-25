@@ -107,8 +107,6 @@ for(let i = 0; i < codiciPromo.length; i++){
 
     }
 
-
-
                                 //CALCOLO DEL PERVENTIVO
 //"prezzo base" = "costoOraLavoro" * "tempoLavoro"
 prezzoBase = (costoOraLavoro * tempoLavoro).toFixed(2);

@@ -53,27 +53,27 @@
             <div class="col-md-8 debug3">
               <div class="mb-3">
                 <h2>Richiesta Preventivo</h2>
-                <span class="fw-medium">Compila il form per riciederte in preventivo per i nostri servizio di sviluppo</span>
+                <span class="fw-medium">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo web</span>
               </div>
               
               <!-- form section -->
               <form id="from-preventivo">
                 <!-- dati personali -->
                 <div class="mb-3">
-                  <label for="nome" class="form-label " >Nome</label>
+                  <label for="nome" class="form-label " >Nome *</label>
                   <input type="text" class="form-control border-primary" id="nome" name="nome" required>
                 </div>
                 <div class="mb-3">
-                  <label for="cognome" class="form-label">Cognome</label>
+                  <label for="cognome" class="form-label">Cognome *</label>
                   <input type="text" class="form-control border-primary" id="cognome" name="cognome" required>
                 </div>
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
+                  <label for="email" class="form-label">Email *</label>
                   <input type="email" class="form-control border-primary" id="email" required>
                 </div>
                 <!-- detagli prestazioni -->
                 <div class="mb-3">
-                  <label for="prestazione" class="form-label">Tipo di lovoro</label>
+                  <label for="prestazione" class="form-label">Tipo di lovoro *</label>
                   <select class="form-select border-primary" id="prestazione" name="prestazione">
                     <option selected value="tipo-prestazione">Seleziona il tipo di lavoro</option>
                     <option value="backend">Backed Development</option>
@@ -96,7 +96,7 @@
                 <div class="form-check">
                   <label class="form-check-label" for="privacy">
                   <input class="form-check-input border-primary" type="checkbox" value="" id="privacy" name="privacy" required>
-                    Acetto la Privacy Policy
+                    Accetto la Privacy Policy
                   </label>
                 </div>
                 <!-- submit preventivo -->
@@ -110,6 +110,9 @@
                       <!-- talble info preventivo -->
                       <thead>
                         <tr>
+                          <th colspan="2" class="text-center">Detagli Preventivo</th>
+                        </tr>
+                        <tr>
                           <th scope="col">Descrizione</th>
                           <th scope="col">Valore</th>
                         </tr>
@@ -120,8 +123,6 @@
                   </div>
                 </div>
               </form> 
-              
-              
             </div>
 
             <!-- info contatti -->
@@ -129,8 +130,8 @@
                 <div class="card mx-auto" >
                   <img src="./img/hero-inferior.svg" class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">I nostri onttati</h5>
-                    <p class="card-text">Se hai bosogno di aiuto puoi contattarci:</p>
+                    <h5 class="card-title">I nostri contatti</h5>
+                    <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">help@boolfactory.test</li>
@@ -140,8 +141,8 @@
                     <a href="#" class="card-link">Help desk</a>
                   </div>
                 </div>
+                <span class="text-body-tertiary">* Campi obbligatori</span>
               </div>
-            
           </div>
         </div>
       </section>
